@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(../fonts/fontawesome-webfont.eot), url(../fonts/fontawesome-webfont.svg), url(../fonts/fontawesome-webfont.ttf), url(../fonts/fontawesome-webfont.woff), url(../fonts/fontawesome-webfont.woff2), url(../fonts/FontAwesome.otf); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #203e5a; }
+  .container .login-container {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    background-color: #38a198;
+    padding: 20px 40px;
+    color: rgba(255, 255, 255, 0.6); }
+    .container .login-container .logo-container {
+      text-align: center; }
+      .container .login-container .logo-container img {
+        height: 100px;
+        margin-bottom: 10px; }
+    .container .login-container .login-form {
+      padding: 40px 0 15px 0;
+      text-align: center; }
+      .container .login-container .login-form .input-field {
+        padding: 0 20px; }
+        .container .login-container .login-form .input-field input,
+        .container .login-container .login-form .input-field button {
+          font-family: GilroyLight; }
+        .container .login-container .login-form .input-field .input {
+          padding: 12px;
+          background-color: #2b7972;
+          border-radius: 15px;
+          color: rgba(255, 255, 255, 0.6);
+          border: none;
+          font-size: 0.8rem;
+          outline: none;
+          transition: all 0.3s ease;
+          width: 80%;
+          margin-bottom: 10px;
+          border: 2px solid transparent; }
+          .container .login-container .login-form .input-field .input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .container .login-container .login-form .input-field .input:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .container .login-container .login-form .input-field .input::placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .container .login-container .login-form .input-field .input:focus {
+            border: 2px solid #125b4e; }
+      .container .login-container .login-form .button {
+        padding: 14px;
+        background-color: #125b4e;
+        border-radius: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        border: none;
+        font-size: 0.8rem;
+        outline: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        width: 90%;
+        font-family: GilroyLight;
+        margin-top: 30px; }
+        .container .login-container .login-form .button:hover {
+          background-color: #2b7972; }
+    .container .login-container .belowForm {
+      text-align: center;
+      font-size: 0.75rem; }
+      .container .login-container .belowForm a {
+        color: rgba(255, 255, 255, 0.6); }
+
+.dashboard-container {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw; }
+  .dashboard-container .sidebar {
+    width: 230px;
+    border-right: 2px solid #1a1f23;
+    background-color: #232a32; }
+    .dashboard-container .sidebar .logo-wrapper {
+      padding: 10px 0;
+      text-align: center; }
+      .dashboard-container .sidebar .logo-wrapper img {
+        height: 60px; }
+    .dashboard-container .sidebar .user-wrapper {
+      padding: 25px;
+      display: -ms-flexbox;
+      display: flex;
+      border-top: 1px solid #2f363e;
+      border-bottom: 1px solid #2f363e; }
+      .dashboard-container .sidebar .user-wrapper .avatar-part .avatar {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 4px solid #7a7a7a;
+        overflow: hidden; }
+        .dashboard-container .sidebar .user-wrapper .avatar-part .avatar img {
+          width: 100%;
+          height: auto;
+          object-fit: cover; }
+      .dashboard-container .sidebar .user-wrapper .user-part {
+        padding-left: 15px; }
+        .dashboard-container .sidebar .user-wrapper .user-part .username {
+          font-size: 12px;
+          color: #b3b3b3;
+          font-weight: 500;
+          font-weight: bold; }
+        .dashboard-container .sidebar .user-wrapper .user-part .settings a {
+          color: #b3b3b3;
+          text-decoration: none;
+          font-size: 16px;
+          margin-right: 8px;
+          transition: color 0.3s ease; }
+          .dashboard-container .sidebar .user-wrapper .user-part .settings a:hover {
+            color: #f65d57; }
+    .dashboard-container .sidebar .channels,
+    .dashboard-container .sidebar .users {
+      padding: 25px;
+      color: #b3b3b3; }
+      .dashboard-container .sidebar .channels h3,
+      .dashboard-container .sidebar .users h3 {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold; }
+        .dashboard-container .sidebar .channels h3 .fa,
+        .dashboard-container .sidebar .users h3 .fa {
+          margin-right: 8px; }
+      .dashboard-container .sidebar .channels .channelsList,
+      .dashboard-container .sidebar .channels .usersList,
+      .dashboard-container .sidebar .users .channelsList,
+      .dashboard-container .sidebar .users .usersList {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        color: #b3b3b3; }
+        .dashboard-container .sidebar .channels .channelsList li,
+        .dashboard-container .sidebar .channels .usersList li,
+        .dashboard-container .sidebar .users .channelsList li,
+        .dashboard-container .sidebar .users .usersList li {
+          padding: 4px 0; }
+          .dashboard-container .sidebar .channels .channelsList li a,
+          .dashboard-container .sidebar .channels .usersList li a,
+          .dashboard-container .sidebar .users .channelsList li a,
+          .dashboard-container .sidebar .users .usersList li a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.3s ease; }
+            .dashboard-container .sidebar .channels .channelsList li a:hover,
+            .dashboard-container .sidebar .channels .usersList li a:hover,
+            .dashboard-container .sidebar .users .channelsList li a:hover,
+            .dashboard-container .sidebar .users .usersList li a:hover {
+              color: white; }
+            .dashboard-container .sidebar .channels .channelsList li a .status,
+            .dashboard-container .sidebar .channels .usersList li a .status,
+            .dashboard-container .sidebar .users .channelsList li a .status,
+            .dashboard-container .sidebar .users .usersList li a .status {
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              margin-right: 10px;
+              background-color: #444444; }
+            .dashboard-container .sidebar .channels .channelsList li a .status.online,
+            .dashboard-container .sidebar .channels .usersList li a .status.online,
+            .dashboard-container .sidebar .users .channelsList li a .status.online,
+            .dashboard-container .sidebar .users .usersList li a .status.online {
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              margin-right: 10px;
+              background-color: #4dd64d;
+              box-shadow: 0 0 6px #13ee13; }
+      .dashboard-container .sidebar .channels .channelsList,
+      .dashboard-container .sidebar .users .channelsList {
+        text-transform: lowercase; }
+        .dashboard-container .sidebar .channels .channelsList li,
+        .dashboard-container .sidebar .users .channelsList li {
+          text-transform: uppercase; }
+          .dashboard-container .sidebar .channels .channelsList li a,
+          .dashboard-container .sidebar .users .channelsList li a {
+            font-size: 11px; }
+            .dashboard-container .sidebar .channels .channelsList li a .fa,
+            .dashboard-container .sidebar .users .channelsList li a .fa {
+              margin-right: 8px;
+              color: #5b5b5b; }
+  .dashboard-container .content {
+    -ms-flex: 1;
+        flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background-color: #e9ecf1;
+    position: relative; }
+    .dashboard-container .content #messages {
+      list-style-type: none;
+      overflow: auto;
+      -ms-flex: 1;
+          flex: 1;
+      margin: 40px; }
+      .dashboard-container .content #messages .message {
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px; }
+        .dashboard-container .content #messages .message .userAvatar {
+          padding: 0 20px;
+          margin-right: 22px;
+          text-align: center; }
+          .dashboard-container .content #messages .message .userAvatar .avatar {
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 6px; }
+            .dashboard-container .content #messages .message .userAvatar .avatar img {
+              width: 100%; }
+          .dashboard-container .content #messages .message .userAvatar .currentTime {
+            font-size: 11px;
+            color: #999; }
+        .dashboard-container .content #messages .message .message-body {
+          padding: 10px 20px;
+          background-color: white;
+          max-width: 70%;
+          margin-bottom: 10px;
+          box-shadow: 1px 2px 5px #dddddd;
+          border-radius: 5px;
+          position: relative;
+          font-size: 12px;
+          color: #999; }
+          .dashboard-container .content #messages .message .message-body::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -16px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8.5px 17px 8.5px 0;
+            border-color: transparent #ffffff transparent transparent; }
+    .dashboard-container .content .bottom-part {
+      padding: 13px 0;
+      width: 100%;
+      background-color: white;
+      border-top: 4px solid #eaebef;
+      position: relative; }
+      .dashboard-container .content .bottom-part .attachment {
+        border: 0;
+        color: #989898;
+        background: none;
+        font-size: 22px;
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        cursor: pointer;
+        outline: none; }
+      .dashboard-container .content .bottom-part .emoticons {
+        border: 0;
+        color: #989898;
+        background: none;
+        font-size: 29px;
+        position: absolute;
+        top: 22px;
+        right: 75px;
+        cursor: pointer;
+        outline: none; }
+      .dashboard-container .content .bottom-part form {
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%; }
+        .dashboard-container .content .bottom-part form input {
+          padding: 15px;
+          padding-left: 60px;
+          border: 1px solid rgba(0, 0, 0, 0.4);
+          -ms-flex: 1;
+              flex: 1;
+          border: none;
+          background: transparent;
+          outline: none;
+          color: #989898; }
+          .dashboard-container .content .bottom-part form input::-webkit-input-placeholder {
+            color: #989898; }
+          .dashboard-container .content .bottom-part form input:-ms-input-placeholder {
+            color: #989898; }
+          .dashboard-container .content .bottom-part form input::placeholder {
+            color: #989898; }
+        .dashboard-container .content .bottom-part form .sendMessage {
+          padding: 7px 13px;
+          background-color: #5e6b7b;
+          color: white;
+          font-size: 16px;
+          border-radius: 50%;
+          border: none;
+          margin-right: 20px;
+          margin-top: 2px;
+          outline: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease; }
+          .dashboard-container .content .bottom-part form .sendMessage:hover {
+            background-color: #232a32; }

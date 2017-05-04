@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include parts/header %>
+<body>
+  <div class="container">
+    <div class="login-container">
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Logo">
+      </div>
+      <p class="login-note">Welcome user! If you don't have an account just create it or login in to app!</p>
+      
+      <form class="login-form" action="/signup" method="POST">
+        <div class="input-field">
+          <input class="input" type="text" placeholder="Enter name" name="name">
+        </div>
+        <div class="input-field">
+          <input class="input" type="text" placeholder="Enter surname" name="surname">
+        </div>
+        <div class="input-field">
+          <input class="input" type="email" placeholder="Enter e-mail" name="email">
+        </div>
+        <div class="input-field">
+          <input class="input" type="password" placeholder="Enter password" name="password">
+        </div>
+        <div class="input-field">
+          <input class="button" type="submit" value="Create account">
+        </div>
+      </form>
+      <p class="belowForm">Already have an account? <a href="/login">Login here!</a></p>
+    </div>
+  </div>
+</body>
+</html>

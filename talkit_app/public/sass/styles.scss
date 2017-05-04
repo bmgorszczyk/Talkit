@@ -1,0 +1,421 @@
+//colors
+
+$newOrange: #f65d57;
+$newGrey: #2b2b2b;
+$newDarkGrey: #262626;
+
+$bgBlue: #203e5a;
+$boxGreen: #38a198;
+$darkerGreen: #2b7972;
+$darkGreen: #125b4e;
+$lightWhite: rgba(255,255,255,0.6);
+$myRed: #f36e6e;
+$myBlue: #508bb9;
+
+$talkitBlue: #232a32;
+$talkitGrey: #e9ecf1;
+$talkitInput: #fcfcfc;
+
+// font
+
+$PTSans: 'PT Sans', sans-serif;
+$OpenSans: 'Open Sans', sans-serif;
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(../fonts/fontawesome-webfont.eot),
+       url(../fonts/fontawesome-webfont.svg),
+       url(../fonts/fontawesome-webfont.ttf),
+       url(../fonts/fontawesome-webfont.woff),
+       url(../fonts/fontawesome-webfont.woff2),
+       url(../fonts/FontAwesome.otf),
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $OpenSans;
+  font-size: 13px;
+}
+
+// ================ LOGIN AND REGISTER PAGES =============== //
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgBlue;
+
+  .login-container {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    background-color: $boxGreen;
+    padding: 20px 40px;
+    color: $lightWhite;
+
+    .logo-container {
+      text-align: center;
+
+      img {
+        height: 100px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .login-form {
+      padding: 40px 0 15px 0;
+      text-align: center;
+
+      .input-field {
+        padding: 0 20px;
+
+        input,
+        button {
+          font-family: GilroyLight;
+        }
+
+        .input {
+          padding: 12px;
+          background-color: $darkerGreen;
+          border-radius: 15px;
+          color: $lightWhite;
+          border: none;
+          font-size: 0.8rem;
+          outline: none;
+          transition: all 0.3s ease;
+          width: 80%;
+          margin-bottom: 10px;
+          border: 2px solid transparent;
+
+          &::placeholder {
+            color: lighten($lightWhite, 72%);
+          }
+
+          &:focus {
+            border: 2px solid $darkGreen;
+          }
+        }
+      }
+
+      .button {
+        padding: 14px;
+        background-color: $darkGreen;
+        border-radius: 15px;
+        color: $lightWhite;
+        border: none;
+        font-size: 0.8rem;
+        outline: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        width: 90%;
+        font-family: GilroyLight;
+        margin-top: 30px;
+
+        &:hover {
+          background-color: $darkerGreen;
+        }
+      }
+    }
+
+    .belowForm {
+      text-align: center;
+      font-size: 0.75rem;
+
+      a {
+        color: $lightWhite;
+      }
+    }
+  }
+}
+
+// ================== DASHBOARD STYLES =================== //
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  .sidebar {
+    width: 230px;
+    border-right: 2px solid #1a1f23;
+    background-color: $talkitBlue;
+
+    .logo-wrapper {
+      padding: 10px 0;
+      text-align: center;
+
+      img {
+        height: 60px;
+      }
+    }
+
+    .user-wrapper {
+      padding: 25px;
+      display: flex;
+      border-top: 1px solid #2f363e;
+      border-bottom: 1px solid #2f363e;
+
+      .avatar-part {
+
+        .avatar {
+          width: 50px;
+          height: 50px;
+          margin: 0 auto;
+          border-radius: 50%;
+          border: 4px solid #7a7a7a;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .user-part {
+        padding-left: 15px;
+
+        .username {
+            font-size: 12px;
+            color: #b3b3b3;
+            font-weight: 500;
+            font-weight: bold;
+        }
+
+        .settings {
+
+          a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 8px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $newOrange;
+            }
+          }
+        }
+      }
+    }
+
+    .channels,
+    .users {
+      padding: 25px;
+      color: #b3b3b3;
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+
+        .fa {
+          margin-right: 8px;
+        }
+      }
+
+      .channelsList,
+      .usersList {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        color: #b3b3b3;
+
+        li {
+          padding: 4px 0;
+
+          a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            &:hover {
+              color: white;
+            }
+
+            .status {
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              margin-right: 10px;
+              background-color: #444444;
+            }
+
+            .status.online {
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              margin-right: 10px;
+              background-color: #4dd64d;
+              box-shadow: 0 0 6px #13ee13;
+            }
+          }
+        }
+      }
+      .channelsList {
+        text-transform: lowercase;
+
+        li {
+          text-transform: uppercase;
+
+          a {
+            font-size: 11px;
+
+            .fa {
+              margin-right: 8px;
+              color: #5b5b5b;
+            }
+          }
+        }
+      }
+    }
+
+    .users {
+      //background-color: $newGrey;
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $talkitGrey;
+    position: relative;
+
+    #messages {
+      list-style-type: none;
+      overflow: auto;
+      flex: 1;
+      margin: 40px;
+
+      .message {
+        display: flex;
+        margin-bottom: 10px;
+
+        .userAvatar {
+          padding: 0 20px;
+          margin-right: 22px;
+          text-align: center;
+
+          .avatar {
+              height: 42px;
+              width: 42px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-bottom: 6px;
+
+              img {
+                width: 100%;
+              }
+          }
+
+          .currentTime {
+            font-size: 11px;
+            color: #999;
+          }
+        }
+
+        .message-body {
+          padding: 10px 20px;
+          background-color: white;
+          max-width: 70%;
+          margin-bottom: 10px;
+          box-shadow: 1px 2px 5px #dddddd;
+          border-radius: 5px;
+          position: relative;
+          font-size: 12px;
+          color: #999;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -16px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8.5px 17px 8.5px 0;
+            border-color: transparent #ffffff transparent transparent;
+          }
+        }
+      }
+    }
+
+    .bottom-part {
+      padding: 13px 0;
+      width: 100%;
+      background-color: white;
+      border-top: 4px solid #eaebef;
+      position: relative;
+
+      .attachment {
+        border: 0;
+        color: #989898;
+        background: none;
+        font-size: 22px;
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .emoticons {
+        border: 0;
+        color: #989898;
+        background: none;
+        font-size: 29px;
+        position: absolute;
+        top: 22px;
+        right: 75px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      form {
+        display: flex;
+        width: 100%;
+
+        input {
+          padding: 15px;
+          padding-left: 60px;
+          border: 1px solid rgba(0,0,0,0.4);
+          flex: 1;
+          border: none;
+          background: transparent;
+          outline: none;
+          color: #989898;
+
+          &::placeholder {
+            color: #989898;
+          }
+        }
+
+        .sendMessage {
+          padding: 7px 13px;
+          background-color: #5e6b7b;
+          color: white;
+          font-size: 16px;
+          border-radius: 50%;
+          border: none;
+          margin-right: 20px;
+          margin-top: 2px;
+          outline: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $talkitBlue;
+          }
+        }
+      }
+    }
+  }
+}

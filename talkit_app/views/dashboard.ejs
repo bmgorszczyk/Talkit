@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include parts/header %>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <div class="logo-wrapper">
+        <img src="./img/logo.png" alt="Logo">
+      </div>
+      <div class="user-wrapper">
+        <div class="avatar-part">
+          <div class="avatar">
+            <img src="./img/avatar-placeholder.png" alt="Avatar">
+          </div>
+        </div>
+        <div class="user-part">
+          <p class="username"><%= name %><br><%= surname %></p>
+          <div class="settings">
+            <a href="#"><span class="fa fa-cog"></span></a>
+            <a href="/logout"><span class="fa fa-power-off"></span></a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="channels">
+        <h3><span class="fa fa-cubes"></span>Channels</h3>
+        <ul class="channelsList">
+          <li><a href="#"><span class="fa fa-cube"></span>General</a></li>
+          <li><a href="#"><span class="fa fa-cube"></span>Random</a></li>
+          <li><a href="#"><span class="fa fa-cube"></span>Attendence</a></li>
+          <li><a href="#"><span class="fa fa-cube"></span>Crazy</a></li>
+        </ul>
+      </div> -->
+      <div class="users">
+        <h3><span class="fa fa-comment-o"></span>Available users</h3>
+        <ul class="usersList">
+          <li><a href="#"><span class="status"></span>Waclaw Labuda</a></li>
+          <li><a href="#"><span class="status online"></span>Milosz Niec</a></li>
+          <li><a href="#"><span class="status online"></span>Karol Liszka</a></li>
+          <li><a href="#"><span class="status"></span>Jan Nowak</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <ul id="messages"></ul>
+      <div class="bottom-part">
+        <button class="attachment"><span class="fa fa-paperclip"></span></button>
+        <form action="">
+           <input id="msg" autocomplete="off" placeholder="Type your message..." /><button class="sendMessage"><span class="fa fa-paper-plane"></span></button>
+        </form>
+        <button class="emoticons"><span class="fa fa-smile-o"></span></button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/js/scripts.js"></script>
+
+</body>
+</html>
